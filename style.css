@@ -302,7 +302,7 @@ h6 {
 @media (max-width: 767px) {
   .home {
     min-height: calc(100vh - 80px);
-    padding-top: 100px;
+    padding-top: 80px;
     padding-bottom: 40px;
     display: flex;
     align-items: center;
@@ -1325,4 +1325,5 @@ h6 {
     font-size: 0.85rem;
   }
 }
+
 
