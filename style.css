@@ -298,11 +298,13 @@ h6 {
   filter: drop-shadow(0 0 0 #7d2ae8)
     drop-shadow(0 10px 30px rgba(125, 42, 232, 0.45));
 }
-
-@media (hover: none) and (pointer: coarse) {
+@media (hover: none) and (pointer: coarse) and (min-width: 992px) {
   main {
     padding-top: 110px;
   }
+}
+@media (hover: none) and (pointer: coarse) {
+  
   .home {
     width: 100vw;
     max-width: 100vw;
@@ -1364,6 +1366,7 @@ h6 {
     font-size: 0.85rem;
   }
 }
+
 
 
 
