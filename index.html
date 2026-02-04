@@ -34,12 +34,13 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
-    <!---Header-->
-    <header>
+    <header class="header">
       <h2 class="logo"><span>B</span>asith.</h2>
+
+      <!-- Desktop Navigation -->
       <nav class="navigation d-none d-md-flex">
         <a href="#home">Home</a>
         <a href="#profile">Profile</a>
@@ -47,14 +48,67 @@
         <a href="#certifications">Certifications</a>
         <a href="#contact">Contact</a>
       </nav>
+
       <a
         href="Resume/Basith_Rubani_Resume.pdf"
         target="_blank"
-        class="nav-link btn-resume-header text-center"
+        class="nav-link btn-resume-header text-center d-none d-md-inline-block"
       >
         Resume
       </a>
+
+      <!-- Mobile Hamburger -->
+      <button
+        class="navbar-toggler d-md-none"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mobileMenu"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
     </header>
+
+    <!-- ---------------------------Mobile Menu---------------------------- -->
+    <div class="collapse mobile-menu d-md-none" id="mobileMenu">
+      <nav class="mobile-nav">
+        <a href="#home" data-bs-toggle="collapse" data-bs-target="#mobileMenu"
+          >Home</a
+        >
+        <a
+          href="#profile"
+          data-bs-toggle="collapse"
+          data-bs-target="#mobileMenu"
+          >Profile</a
+        >
+        <a
+          href="#projects"
+          data-bs-toggle="collapse"
+          data-bs-target="#mobileMenu"
+          >Projects</a
+        >
+        <a
+          href="#certifications"
+          data-bs-toggle="collapse"
+          data-bs-target="#mobileMenu"
+          >Certifications</a
+        >
+        <a
+          href="#contact"
+          data-bs-toggle="collapse"
+          data-bs-target="#mobileMenu"
+          >Contact</a
+        >
+
+        <a
+          href="Resume/Basith_Rubani_Resume.pdf"
+          target="_blank"
+          class="btn-resume-mobile"
+        >
+          Resume
+        </a>
+      </nav>
+    </div>
+
     <main>
       <!------------------------------Home Section---------------------------------->
       <section id="home" class="home">
@@ -260,7 +314,7 @@
                     <span class="percent">60%</span>
                   </h5>
                   <div class="progress">
-                    <div class="progress-bar" style="width: 50%"></div>
+                    <div class="progress-bar" style="width: 60%"></div>
                   </div>
                 </div>
 
@@ -531,7 +585,7 @@
                     ><span>JavaScript</span>
                   </div>
                   <div class="project-links">
-                    <a href="https://github.com/Basith-Rubani/Basith-Rubani---Portfolio" target= "_blank" class="btn-project primary"
+                    <a href="#" class="btn-project primary"
                       ><i class="fa-brands fa-github"></i> GitHub</a
                     >
                     <a href="#home" class="btn-project secondary"
@@ -1027,4 +1081,3 @@
     </script>
   </body>
 </html>
-
