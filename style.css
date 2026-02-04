@@ -183,6 +183,7 @@ h6 {
   color: #fff;
 }
 
+/* ---------------- Mobile Header ---------------- */
 @media (max-width: 767px) {
   header {
     padding: 15px 20px;
@@ -192,10 +193,53 @@ h6 {
   header .logo {
     font-size: 1.8rem;
   }
+  .navbar-toggler {
+    border: none;
+    font-size: 1.4rem;
+  }
 
-  .btn-resume-header {
-    padding: 8px 22px;
-    font-size: 0.85rem;
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+
+  .mobile-menu {
+    background: rgba(15, 15, 15, 0.95);
+    backdrop-filter: blur(12px);
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    z-index: 999;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .mobile-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+
+  .mobile-nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .btn-resume-mobile {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 25px;
+    background: #0d6efd;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
   }
 }
 
