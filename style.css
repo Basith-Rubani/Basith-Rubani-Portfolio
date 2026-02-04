@@ -185,7 +185,7 @@ h6 {
 
 @media (max-width: 767px) {
   header {
-    padding: 15px 20px;
+    padding: 12px 18px;
     border-radius: 14px;
   }
 
@@ -301,14 +301,23 @@ h6 {
 
 @media (max-width: 767px) {
   .home {
-    min-height: auto;
-    padding-top: 120px;
+    min-height: calc(100vh - 80px);
+    padding-top: 100px;
     padding-bottom: 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  .home .row {
+    margin-left: 0;
+    margin-right: 0;
   }
 
   #content {
     align-items: center;
     text-align: center;
+    width: 100%;
+    justify-content: center;
   }
 
   #content h2 {
@@ -1316,3 +1325,4 @@ h6 {
     font-size: 0.85rem;
   }
 }
+
