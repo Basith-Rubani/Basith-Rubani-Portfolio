@@ -32,6 +32,25 @@ section {
   box-sizing: border-box;
 }
 
+@media (max-width: 767px) {
+  section {
+    scroll-margin-top: 80px;
+  }
+
+  h2 {
+    font-size: 1.9rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}
+
+/*------------------------------Header CSS--------------------------*/
 header {
   position: fixed;
   top: 0;
@@ -117,6 +136,7 @@ header .logo {
   box-shadow: 0 10px 25px rgba(125, 42, 232, 0.35);
   background: linear-gradient(135deg, #6a20d9, #3f5ee8);
 }
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: #fbfaff; /* The tinted background */
@@ -133,13 +153,11 @@ h6 {
   font-weight: 700;
 }
 
-/* Hero buttons wrapper */
 .btn-group-custom {
   display: flex;
   align-items: center;
 }
 
-/* Primary hero button */
 .btn-primary-custom {
   background-color: #7d2ae8;
   color: #fff;
@@ -152,7 +170,6 @@ h6 {
   border-color: #7d2ae8;
 }
 
-/* Outline hero button */
 .btn-outline-primary-custom {
   background-color: #fff;
   color: #7d2ae8;
@@ -165,41 +182,24 @@ h6 {
   background-color: #7d2ae8;
   color: #fff;
 }
-/* ================================
-   RESPONSIVE BUTTONS
-================================ */
 
-/* Tablet adjustments */
-@media (max-width: 991px) {
-  .btn {
-    padding: 10px 32px;
-    font-size: 0.95rem;
-  }
-}
-
-/* Mobile layout */
 @media (max-width: 767px) {
-  .btn-group-custom {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
+  header {
+    padding: 15px 20px;
+    border-radius: 14px;
   }
 
-  .btn-group-custom .btn {
-    width: 100%;
-    text-align: center;
+  header .logo {
+    font-size: 1.8rem;
   }
 
-  .btn-outline-primary-custom {
-    margin-left: 0;
-    margin-top: 15px;
-  }
-
-  .btn-talk {
-    padding: 8px 24px;
+  .btn-resume-header {
+    padding: 8px 22px;
+    font-size: 0.85rem;
   }
 }
 
+/*--------------------------------Home CSS-------------------------------*/
 .home {
   position: relative;
   width: 100%;
@@ -252,18 +252,6 @@ h6 {
   font-size: 1rem;
   color: #222;
 }
-@media (max-width: 767px) {
-  #content p {
-    max-width: 100%;
-    font-size: 1rem;
-    line-height: 1.65;
-  }
-}
-@media (max-width: 767px) {
-  #content p {
-    text-align: left;
-  }
-}
 
 .social-icons {
   position: static;
@@ -310,29 +298,72 @@ h6 {
   filter: drop-shadow(0 0 0 #7d2ae8)
     drop-shadow(0 10px 30px rgba(125, 42, 232, 0.45));
 }
+
 @media (max-width: 767px) {
-  .profile-img-wrapper {
-    height: auto;
+  .home {
+    min-height: auto;
+    padding-top: 120px;
+    padding-bottom: 40px;
   }
 
-  .profile-img {
-    height: auto;
+  #content {
+    align-items: center;
+    text-align: center;
+  }
+
+  #content h2 {
+    font-size: 2rem;
+  }
+
+  #content h4 {
+    font-size: 1.4rem;
+  }
+
+  #content p {
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.65;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .profile-img-wrapper {
+    margin-top: 30px;
+    max-width: 260px;
+  }
+
+  .btn-group-custom {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .btn-group-custom .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .btn-outline-primary-custom {
+    margin-left: 0;
+    margin-top: 15px;
   }
 }
-/*-----------Profile Section CSS-------*/
+
+/*-----------------------------Profile Section CSS-----------------------*/
 .profile-section {
   padding-top: 10px;
   margin-top: -30px;
   background: transparent;
 }
 
-/* Center container like header */
 .profile-container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* -------- Profile Grid Layout -------- */
 .profile-grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -340,7 +371,6 @@ h6 {
   align-items: stretch;
 }
 
-/* Glass Card Base */
 .profile-card {
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(15px);
@@ -364,7 +394,6 @@ h6 {
     0 15px 25px rgba(125, 42, 232, 0.1);
 }
 
-/* Section Header */
 .section-header {
   text-align: center;
   margin-bottom: 35px;
@@ -381,7 +410,7 @@ h6 {
 .header-titles {
   z-index: 2;
 }
-/* Geometric Logo/Design for Left & Right */
+
 .design-node {
   width: 40px;
   height: 40px;
@@ -402,7 +431,6 @@ h6 {
   border-radius: 2px;
 }
 
-/* Connecting line that fades out */
 .design-node.left::after,
 .design-node.right::after {
   content: "";
@@ -429,12 +457,6 @@ h6 {
   border-color: #4969f5;
 }
 
-/* Responsive fix for header design */
-@media (max-width: 767px) {
-  .design-node {
-    display: none; /* Hides design on mobile to keep title centered */
-  }
-}
 .section-header h2 {
   font-size: 2.3rem;
   font-weight: 700;
@@ -450,17 +472,16 @@ h6 {
   font-weight: 600;
 }
 
-/* ------------------- Skills ------------------ */
+/* ------------------- Profile ->Skills ------------------ */
 
 .profile-skills {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* This spreads items out to fill the height */
+  justify-content: space-between;
   height: 100%;
   padding: 32px;
 }
 
-/* Make Skills Card Slightly Taller Look */
 .profile-about,
 .profile-skills {
   flex: 1;
@@ -469,7 +490,7 @@ h6 {
 }
 
 .profile-skills h3 {
-  margin-bottom: 30px; /* Space between header and first skill */
+  margin-bottom: 30px;
   color: #7d2ae8;
 }
 
@@ -482,7 +503,6 @@ h6 {
   margin-bottom: 0;
 }
 
-/* FIXED: Target the text specifically */
 .skill-item h5 {
   font-size: 0.95rem;
   font-weight: 600;
@@ -504,7 +524,6 @@ h6 {
   gap: 8px;
 }
 
-/* Progress Bars */
 .profile-skills .progress {
   height: 10px;
   background-color: #f0f0f0;
@@ -519,7 +538,6 @@ h6 {
   transition: width 1.5s ease-in-out;
 }
 
-/* Add a small glow to the end of the bar */
 .profile-skills .progress-bar::after {
   content: "";
   position: absolute;
@@ -532,7 +550,7 @@ h6 {
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(73, 105, 245, 0.8);
 }
-/* Hover Effects */
+
 .skill-item:hover {
   transform: translateX(2px);
 }
@@ -548,7 +566,7 @@ h6 {
   transition: all 0.3s ease;
 }
 
-/* -------- About -------- */
+/* -------- Profile - About -------- */
 .profile-about h3,
 .profile-education h3 {
   font-size: 1.6rem;
@@ -564,7 +582,7 @@ h6 {
   color: #333;
   margin-bottom: 15px;
 }
-/* Highlights in About Me */
+
 .about-highlights .highlight-item {
   background: rgba(125, 42, 232, 0.05);
   padding: 8px 15px;
@@ -578,10 +596,10 @@ h6 {
   gap: 8px;
 }
 .about-highlights .highlight-item i {
-  color: #28a745; /* Success Green for the checkmark */
+  color: #28a745;
 }
 
-/* -------- Education -------- */
+/* -------- Profile - Education -------- */
 
 .education-item {
   position: relative;
@@ -632,7 +650,6 @@ h6 {
   color: #7d2ae8;
 }
 
-/* Styling the Scores */
 .edu-score {
   background: linear-gradient(135deg, #7d2ae8, #4969f5);
   color: #fff;
@@ -644,22 +661,6 @@ h6 {
   box-shadow: 0 4px 10px rgba(125, 42, 232, 0.2);
 }
 
-/* -------- Responsive -------- */
-@media (max-width: 768px) {
-  .profile-section {
-    padding: 90px 15px 60px;
-  }
-
-  .profile-card {
-    padding: 30px 25px;
-  }
-
-  .section-header h2 {
-    font-size: 2rem;
-  }
-}
-
-/* Left & Right Columns */
 .profile-left,
 .profile-right {
   display: flex;
@@ -667,7 +668,6 @@ h6 {
   gap: 20px;
 }
 
-/* -------- Responsive Stack -------- */
 @media (max-width: 992px) {
   .profile-grid {
     grid-template-columns: 1fr;
@@ -676,6 +676,38 @@ h6 {
   .profile-left,
   .profile-right {
     gap: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .design-node {
+    display: none;
+  }
+
+  .profile-section {
+    padding: 70px 15px 50px;
+  }
+
+  .profile-card {
+    padding: 22px;
+  }
+
+  .education-item .d-flex {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .edu-score {
+    align-self: flex-start;
+  }
+  .skill-item h5 {
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .profile-skills .progress {
+    height: 8px;
   }
 }
 
@@ -873,6 +905,28 @@ h6 {
   }
 }
 
+@media (max-width: 767px) {
+  #projects {
+    padding-top: 80px;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+
+  .project-img-top {
+    height: 180px;
+  }
+
+  .project-links {
+    flex-direction: column;
+  }
+
+  .btn-project {
+    width: 100%;
+  }
+}
+
 /*---------------------------------Certifications Section ----------------------------*/
 #certifications {
   padding-top: 100px;
@@ -880,7 +934,6 @@ h6 {
   position: relative;
 }
 
-/* --- Card Base & Glowing Effect --- */
 .cert-card {
   background: #fff;
   border-radius: 20px;
@@ -899,7 +952,6 @@ h6 {
   overflow: hidden;
 }
 
-/* The Glass Shine Effect */
 .cert-card::before {
   content: "";
   position: absolute;
@@ -917,7 +969,6 @@ h6 {
   pointer-events: none;
 }
 
-/* Hover States & Dynamic Glows */
 .cert-card:hover {
   transform: translateY(-10px);
   border-color: rgba(125, 42, 232, 0.2);
@@ -1084,6 +1135,21 @@ h6 {
   object-fit: contain;
 }
 
+@media (max-width: 767px) {
+  .cert-card {
+    padding: 22px;
+  }
+
+  .cert-card h3 {
+    font-size: 0.95rem;
+    min-height: auto;
+  }
+
+  .cert-desc {
+    min-height: auto;
+  }
+}
+
 /*-------------------------------------Contact Section ------------------------*/
 #contact {
   padding-top: 10px;
@@ -1186,6 +1252,23 @@ h6 {
   transform: translateY(-3px);
 }
 
+@media (max-width: 767px) {
+  .contact-card {
+    padding: 40px 20px;
+    border-radius: 20px;
+  }
+
+  .contact-actions {
+    flex-direction: column;
+  }
+
+  .btn-email,
+  .btn-cv {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 /*------------------------Footer Styling ----------------------------- */
 
 .footer {
@@ -1221,4 +1304,15 @@ h6 {
   margin: 20px auto 0;
   border-radius: 10px;
   opacity: 0.3;
+}
+
+@media (max-width: 767px) {
+  .footer {
+    padding: 25px 15px;
+    text-align: center;
+  }
+
+  .copyright {
+    font-size: 0.85rem;
+  }
 }
